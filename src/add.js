@@ -3,6 +3,9 @@ const overlay1CreateBtn = document.querySelector("#overlay1_create_btn");
 const overlay1Input = document.querySelector("#overlay1_input");
 const mainContent = document.querySelector(".main_content");
 
+const overlay2 = document.querySelector(".overlay2")
+const overlay2DateInput = document.querySelector(".overlay2_dateInput")
+
 
 function addPage() {
     overlay1CreateBtn.addEventListener("click", function () {
@@ -23,6 +26,15 @@ function addPage() {
         let addDetailsBtn = document.createElement("button");
         addDetailsBtn.setAttribute("class", "add_details_btn");
         addDetailsBtn.innerText = "Add Details";
+
+            
+            addDetailsBtn.addEventListener("click",function(){
+            overlay2.style.display = "block"
+            });
+
+
+
+
 
         let deleteBtn = document.createElement("button");
         deleteBtn.setAttribute("class", "delete_btn");
@@ -50,3 +62,4 @@ export default addPage;
 
 // what i have done in this part:
 // compliting main contener DOM 
+// compliting work of add-details(overlay2)
