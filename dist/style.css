@@ -1,0 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.full_warpper{
+    width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header{
+    background-color: black;
+    height: 100px;
+}
+
+.header{
+    height: 50px;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+}
