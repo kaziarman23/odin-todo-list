@@ -1,13 +1,15 @@
-const overlay1 = document.querySelector(".overlay1")
+const overlay1 = document.querySelector(".overlay1");
 const overlay1CreateBtn = document.querySelector("#overlay1_create_btn");
 const overlay1Input = document.querySelector("#overlay1_input");
 const mainContent = document.querySelector(".main_content");
-const pageContent = document.createElement("div");
-pageContent.setAttribute("class", "task_contener");
+
 
 function addPage() {
     overlay1CreateBtn.addEventListener("click", function () {
-        overlay1.style.display = "none"
+        overlay1.style.display = "none";
+
+        const pageContent = document.createElement("div");
+        pageContent.setAttribute("class", "page_content");
 
         let taskTitel = document.createElement("h3");
         taskTitel.setAttribute("class", "task_tital");
@@ -25,14 +27,26 @@ function addPage() {
         let deleteBtn = document.createElement("button");
         deleteBtn.setAttribute("class", "delete_btn");
         deleteBtn.innerText = "Delete";
+            
+            deleteBtn.addEventListener("click", function(event) {
+            const parentDiv = event.target.parentElement;
+            parentDiv.remove();
+            })
+
 
         pageContent.appendChild(taskTitel);
         pageContent.appendChild(addDetailsBtn);
         pageContent.appendChild(deleteBtn);
         mainContent.appendChild(pageContent);
+
         
         
+
     });
-}
+};
 
 export default addPage;
+
+
+// what i have done in this part:
+// compliting main contener DOM 

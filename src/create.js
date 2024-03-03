@@ -3,11 +3,13 @@ const navClearBtn = document.querySelector("#nav_clear_btn")
 const overlay1 = document.querySelector(".overlay1")
 const overlay1CancelBtn = document.querySelector("#overlay1_cancel_btn")
 const overlay1Input = document.querySelector("#overlay1_input")
+const mainContent = document.querySelector(".main_content");
 
 function createPage(){
 
     navClearBtn.addEventListener("click",function(){
         overlay1.style.display = "none"
+        mainContent.textContent = "";
         clearInput()
     })
 
@@ -27,3 +29,8 @@ function clearInput(){
 }
 
 export default createPage;
+
+
+
+// what i have done in this part:
+// give styles in overlay1
