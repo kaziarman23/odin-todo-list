@@ -84,11 +84,18 @@ body{
 
 /* main content contener part */
 
-.main_content_contener{
+.main_content_wrapper{
     width: 70%;
     height: 589px;
     position: relative;
     float: right;
+    display: block;
+}
+
+.main_content{
+    width: 100%;
+    height: 589px;
+    display: block;
 }
 
 .overlay1{
@@ -115,6 +122,7 @@ body{
     border-radius: 10px;
     background-color: green;
     color: white;
+    cursor: pointer;
 }
 
 #overlay1_cancel_btn{
@@ -125,6 +133,7 @@ body{
     border-radius: 10px;
     background-color: red;
     color: black;
+    cursor: pointer;
 }
 
 .overlay2{
@@ -134,7 +143,7 @@ body{
     left: 25%;
     top: 20%;
     position: absolute;
-    display: block;
+    display: none;
     z-index: 20;
 }
 
@@ -155,6 +164,7 @@ body{
     border-radius: 20px;
     background-color: green;
     color: white;
+    cursor: pointer;
 }
 
 #overlay2_cancel_btn{
@@ -164,4 +174,36 @@ body{
     background-color: red;
     color: black;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.task_contener{
+    width: 100%;
+    height: 80px;
+    background-color: blue;
+    display: block;
+}
+
+.task_tital{
+    font-size: 20px;
+    text-align: center;
+}
+
+.add_details_btn{
+    width: 85px;
+    height: 22px;
+    float: left;
+    margin-left: 15px;
+    border-radius: 20px;
+    background-color: cornflowerblue;
+}
+
+.delete_btn{
+    width: 60px;
+    height: 22px;
+    float: right;
+    color: red;
+    border-radius: 20px;
+    border: none;
+    margin-right: 15px;
 }
