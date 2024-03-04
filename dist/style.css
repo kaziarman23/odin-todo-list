@@ -1,90 +1,92 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 
-body{
-    background-color: darkgrey;
+body {
+    background-color: #01202a;
 }
-.full_warpper{
+.full_warpper {
     width: 100%;
     height: auto;
 }
 
-.wrapper{
+.wrapper {
     width: 960px;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.header{
-    background-color: black;
-    height: 100px;
-}
-
-.header{
+.header {
     height: 50px;
     font-size: larger;
     font-weight: bolder;
     text-align: center;
-    color: white;
+    color: #cefffd;
+    background-color: #01202a;
 }
 
 /* nav part */
 
-
-.nav{
+.nav {
     width: 30%;
     height: 589px;
-    background-color: brown;
+    border-radius: 16px;
+    background-color: #01202a;
     float: left;
     display: flex;
     justify-content: center;
-    float: left;
 }
 
-.nav_content{
+.nav_content {
     width: 80%;
     height: fit-content;
-    background-color: white;
-    border-radius: 20px;
-    color: black;
     margin-top: 20px;
 }
 
-.button_wrapper{
+.button_wrapper {
+    border-radius: 20px;
     align-items: center;
     display: flex;
     flex-direction: column;
+    background-color: #0e092e;
 }
 
-.button_wrapper button{
+.button_wrapper button {
     width: 100px;
     height: 25px;
     border-radius: 15px;
     cursor: pointer;
 }
 
-#nav_create_btn{
+#nav_create_btn {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: green;
+    background-color: #0a1356;
     color: white;
 }
 
-#nav_clear_btn{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: red;
+#nav_create_btn:hover{
+    background-color: #4fa1ef;
     color: black;
 }
 
+#nav_clear_btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(23, 23, 78);
+    color: white;
+}
 
-/* main content contener part */
+#nav_clear_btn:hover{
+    background-color: red;
+    color: black;
+}
+/* main content contener part  */
 
-.main_content_wrapper{
+.main_content_wrapper {
     width: 70%;
     height: 589px;
     position: relative;
@@ -92,15 +94,15 @@ body{
     display: block;
 }
 
-.main_content{
+.main_content {
     width: 100%;
     height: auto;
 }
 
-.overlay1{
-    width: 245px;
+.overlay1 {
+    width: 238px;
     height: 160px;
-    background-color: chocolate;
+    background-color: #241335;
     left: 25%;
     top: 30%;
     position: absolute;
@@ -108,37 +110,48 @@ body{
     z-index: 20;
 }
 
-.overlay1 input{
+.overlay1 input {
     font-size: larger;
     width: 130px;
 }
 
-#overlay1_create_btn{
+#overlay1_create_btn {
     width: 100px;
     height: 25px;
     margin-left: 15px;
     margin-top: 15px;
     border-radius: 10px;
-    background-color: green;
+    background-color: #0a1356;
     color: white;
     cursor: pointer;
 }
 
-#overlay1_cancel_btn{
+#overlay1_create_btn:hover{
+    background-color: #4fa1ef;
+    color: black;
+}
+
+
+#overlay1_cancel_btn {
     width: 100px;
     height: 25px;
     margin-left: 15px;
     margin-top: 15px;
     border-radius: 10px;
-    background-color: red;
-    color: black;
+    background-color: rgb(23, 23, 78);
+    color: rgb(244, 109, 109);
     cursor: pointer;
 }
 
-.overlay2{
+#overlay1_cancel_btn:hover{
+    background-color: red;
+    color: black;
+}
+
+.overlay2 {
     width: 245px;
     height: 330px;
-    background-color: chocolate;
+    background-color: #241335;
     left: 25%;
     top: 20%;
     position: absolute;
@@ -146,71 +159,87 @@ body{
     z-index: 20;
 }
 
-#discriptionInput{
+#discriptionInput {
     width: 232px;
     height: 121px;
     margin-left: 7px;
     margin-top: 5px;
 }
 
-.overlay2_button_wrapper{
+.overlay2_button_wrapper {
     margin-left: 15px;
 }
 
-#overlay2_save_btn{
+#overlay2_save_btn {
     width: 50px;
     height: 25px;
     border-radius: 20px;
-    background-color: green;
+    background-color: #0a1356;
     color: white;
     cursor: pointer;
 }
 
-#overlay2_cancel_btn{
+#overlay2_save_btn:hover{
+    background-color: #4fa1ef;
+    color: black;
+}
+
+#overlay2_cancel_btn {
     width: 60px;
     height: 25px;
     border-radius: 20px;
-    background-color: red;
-    color: black;
+    background-color: rgb(23, 23, 78);
+    color: rgb(244, 109, 109);
     margin-left: 10px;
     cursor: pointer;
 }
 
-.page_contener{
-    
+#overlay2_cancel_btn:hover{
+    background-color: red;
+    color: black;
 }
 
-.page_content{
+.page_content {
     width: 100%;
     height: 80px;
-    background-color: blue;
+    background-color: #191963;
 }
 
-.task_tital{
+.task_tital {
     font-size: 20px;
     text-align: center;
+    color:white;
 }
 
-.add_details_btn{
+.add_details_btn {
     width: 85px;
     height: 22px;
     float: left;
     margin-left: 15px;
     border-radius: 20px;
-    background-color: cornflowerblue;
+    background-color: #0a1356;
+    color: white;
     cursor: pointer;
 }
 
-.delete_btn{
+.add_details_btn:hover {
+    background-color: #4fa1ef;
+    color: black;
+}
+
+.delete_btn {
     width: 60px;
     height: 22px;
-    float: right;
-    color: red;
+    background-color: rgb(8, 8, 138);
+    color: white;
     border-radius: 20px;
     border: none;
     margin-right: 15px;
     cursor: pointer;
+    float: right;
 }
 
-
-
+.delete_btn:hover{
+    background-color: red;
+    color:black;
+}
