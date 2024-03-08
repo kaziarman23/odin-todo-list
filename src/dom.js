@@ -6,6 +6,8 @@ const mainContent = document.querySelector(".main_content");
 const overlay2 = document.querySelector(".overlay2");
 const overlay2CancelBtn = document.querySelector("#overlay2_cancel_btn");
 const overlay2SaveBtn = document.querySelector("#overlay2_save_btn");
+const overlay2Input = document.querySelectorAll("input").value;
+
 
 function addPage() {
     overlay1CreateBtn.addEventListener("click", function () {
@@ -38,36 +40,29 @@ function addPage() {
                 addDetailsBtn.remove();
                 overlay2.style.display = "none";
 
-                const overlay2DateInputValue = document.querySelector(
-                    "#overlay2_dateInput"
-                ).value;
+                let overlay2DateInputValue = document.querySelector("#overlay2_dateInput").value;
                 let overlay2DateInputText = document.createElement("p");
-                overlay2DateInputText.innerHTML = `Dew Date ${overlay2DateInputValue}`;
-                overlay2DateInputText.setAttribute(
-                    "class",
-                    "overlay2DateInputText"
-                );
+                overlay2DateInputText.innerHTML = `Dew Date: ${overlay2DateInputValue}`;
+                overlay2DateInputText.setAttribute("class","overlay2DateInputText");
                 pageContent.appendChild(overlay2DateInputText);
+                
 
-                const priorityInputValue =
-                    document.querySelector("#priorityInput");
+                let priorityInputValue = document.querySelector("#priorityInput").value;
                 if (priorityInputValue === "Low") {
-                    pageContent.style.borderBottom = "5px solid green";
+                    pageContent.style.border = "5px solid green";
                 } else if (priorityInputValue === "Midium") {
-                    pageContent.style.borderBottom = "5px solid yellow";
+                    pageContent.style.border = "5px solid yellow";
                 } else {
-                    pageContent.style.borderBottom = "5px solid red";
+                    pageContent.style.border = "5px solid red";
                 }
 
-                const discriptionInputValue =
-                    document.querySelector("#discriptionInput").value;
+                let discriptionInputValue =document.querySelector("#discriptionInput").value;
                 let discriptionInputText = document.createElement("p");
                 discriptionInputText.innerHTML = `Discription: ${discriptionInputValue}`;
-                discriptionInputText.setAttribute(
-                    "class",
-                    "discriptionInputText"
-                );
+                discriptionInputText.setAttribute("class","discriptionInputText");
                 pageContent.appendChild(discriptionInputText);
+                
+                
             });
         });
 
@@ -84,7 +79,19 @@ function addPage() {
         pageContent.appendChild(addDetailsBtn);
         pageContent.appendChild(deleteBtn);
         mainContent.appendChild(pageContent);
+         
     });
 }
 
+// function clearInput(input){
+//         if(input.type === text){
+//             input.value = '';
+//         }
+//         else if(input.type === Date){
+//             input.value = '';
+//         }
+// }
+
+
 export default addPage;
+
