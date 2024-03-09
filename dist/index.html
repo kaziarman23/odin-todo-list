@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>todo-list-self</title>
+    <title>todo-list</title>
 </head>
 <body>
     <div class="full_wrapper">
@@ -17,55 +17,48 @@
     <div class="full_wrapper">
         <div class="wrapper">
             <div class="nav">
-                <div class="nav_content">
-                    <div class="button_wrapper">
-                        <button type="button" id="nav_create_btn">Create Project</button><br>
-                        <button type="button" id="nav_clear_btn">Clear Projects</button>
-                    </div>
+                <div class="navBtns">
+                    <button type="button" id="navCreateBtn">Create Project</button><br>
+                    <button type="button" id="navClearBtn">Clear Projects</button>
                 </div>
             </div>
-            <div class="main_content_wrapper">
-                <div class="main_content"></div>
+            <div class="mainContener">
+                <div class="mainContent"></div>
 
-                <div class="overlay1">
+                <form class="formOne">
                     <h1>Creating Project</h1>
                     <br>
-                    <label for="overlay1_input">Project Name:</label>
-                    <input type="text" id="overlay1_input">
+                    <label for="createInput">Project Name:</label>
+                    <input type="text" id="createInput">
                     <br>
-                    <div class="main_content_button_wrapper">
-                        <button type="button" id="overlay1_cancel_btn">Cancel Project</button>
-                        <button type="button" id="overlay1_create_btn">Create Project</button>
+                    <div class="formOneBtnContener">
+                        <button type="button" id="formOneCancelBtn">Cancel Project</button>
+                        <button type="button" id="formOneCreateBtn">Create Project</button>
                     </div>
-                </div>
-                <form class="overlay2">
+                </form>
+                
+                <form class="formTwo">
                     <h1>Task Details</h1>
 
-                    <br><label for="overlay2_dateInput">Due date:</label>
-                    <input type="date" id="overlay2_dateInput" class="input"><br>
+                    <br><label for="dateInput">Due date:</label>
+                    <input type="date" id="dateInput"><br>
 
                     <br><label for="priorityInput">Priority level:</label>
-                    <select id="priorityInput" class="input">
+                    <select id="priorityInput" >
                         <option value="Low">Low</option>
                         <option value="Midium">Midium</option>
                         <option value="High">High</option>
                     </select><br>
                     
                     <br><label for="discriptionInput">Discription:</label>
-                    <textarea id="discriptionInput" cols="20" class="input" rows="8" maxlength="10"></textarea><br>
+                    <textarea id="discriptionInput" cols="5"  rows="5" maxlength="10"></textarea><br>
                     
-                    <br><div class="overlay2_button_wrapper">
-                        <button type="submit" name="submit_btn" id="overlay2_save_btn">Save</button>
-                        <button type="button" id="overlay2_cancel_btn">Cancel</button>
+                    <br><div class="formTwoBtnContener">
+                        <button type="button" name="submit_btn" id="formTwoSaveBtn">Save</button>
+                        <button type="button" id="formTwoCancelBtn">Cancel</button>
                     </div><br>
                 </form>
             </div>
-            <!-- <div>
-                <button onclick="localStorage.setItem('Name','arman')">clickMe</button> 
-                <button onclick="localStorage.setItem('Age',50)">clickMe2</button> 
-                <button onclick="localStorage.removeItem('Age')">clear2</button> 
-                <button onclick="localStorage.clear()">clear</button> 
-            </div> -->
         </div>
     </div>
 
