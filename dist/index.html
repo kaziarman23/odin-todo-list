@@ -38,27 +38,27 @@
                         <button type="button" id="overlay1_create_btn">Create Project</button>
                     </div>
                 </div>
-                <div class="overlay2">
+                <form class="overlay2">
                     <h1>Task Details</h1>
 
                     <br><label for="overlay2_dateInput">Due date:</label>
-                    <input type="date" id="overlay2_dateInput"><br>
+                    <input type="date" id="overlay2_dateInput" class="input"><br>
 
                     <br><label for="priorityInput">Priority level:</label>
-                    <select id="priorityInput">
+                    <select id="priorityInput" class="input">
                         <option value="Low">Low</option>
                         <option value="Midium">Midium</option>
                         <option value="High">High</option>
                     </select><br>
                     
                     <br><label for="discriptionInput">Discription:</label>
-                    <textarea id="discriptionInput" cols="20" rows="8"></textarea><br>
+                    <textarea id="discriptionInput" cols="20" class="input" rows="8" maxlength="10"></textarea><br>
                     
                     <br><div class="overlay2_button_wrapper">
-                        <button type="button" id="overlay2_save_btn">Save</button>
+                        <button type="submit" name="submit_btn" id="overlay2_save_btn">Save</button>
                         <button type="button" id="overlay2_cancel_btn">Cancel</button>
                     </div><br>
-                </div>
+                </form>
             </div>
             <!-- <div>
                 <button onclick="localStorage.setItem('Name','arman')">clickMe</button> 
