@@ -175,9 +175,18 @@
     color:black;
 }
 
-.detailsBtn{
+.deleteBtn{
     border-radius: 10px;
     background-color: olive;
     color: black;
     padding: 5px;
 }
+
+.detailsDiv{
+    display: inline-block;
+    width: 150px;
+    color: black;
+    background-color: red;
+    vertical-align: top;
+}
+
