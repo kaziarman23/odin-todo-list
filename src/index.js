@@ -1,7 +1,5 @@
-import createPage from "./create.js";
-import addPage from "./dom.js";
+import createPage from "./createPage.js"
+import addContent from "./dom.js"
 
-
-
-createPage();
-addPage();
+createPage()
+addContent()

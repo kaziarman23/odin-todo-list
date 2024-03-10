@@ -1,276 +1,156 @@
-* {
+*{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: black;
-}
-.full_warpper {
+.fullWrapper{
     width: 100%;
-    height: auto;
 }
 
-.wrapper {
-    width: 960px;
+.wrapper{
+    width:960px;
     height: auto;
+    overflow: hidden;
     margin: 0 auto;
+}
+
+.header{
+    background-color: black;
+    display: block;
+    height: 80px;
     overflow: hidden;
 }
 
-.header {
-    height: 50px;
-    font-size: larger;
-    font-weight: bolder;
+.header h1{
+    color: white;
     text-align: center;
-    color: #00ffc4;
-    background-color: black;
-}
-
-/* nav part */
-
-.nav {
-    width: 30%;
-    height: 589px;
-    border-radius: 16px;
-    background-color: #070c1f;
-    float: left;
-    display: flex;
-    justify-content: center;
-}
-
-.nav_content {
-    width: 80%;
-    height: fit-content;
     margin-top: 20px;
 }
 
-.button_wrapper {
-    border-radius: 20px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    background-color: #0b122b;
-}
+/* nav part  */
 
-.button_wrapper button {
-    width: 100px;
-    height: 25px;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-#nav_create_btn {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #0a1356;
-    color: white;
-}
-
-#nav_create_btn:hover{
-    background-color: #4fa1ef;
-    color: black;
-}
-
-#nav_clear_btn {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(23, 23, 78);
-    color: white;
-}
-
-#nav_clear_btn:hover{
-    background-color: red;
-    color: black;
-}
-/* main content contener part  */
-
-.main_content_wrapper {
-    width: 70%;
-    height: 589px;
-    position: relative;
-    float: right;
+.nav{
+    width: 30%;
+    height: 559px;
+    background-color: black;
+    float: left;
     display: block;
 }
 
-.main_content {
-    width: 100%;
-    height: auto;
+.navBtnContener{
+    width: 180px;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
 }
 
-.overlay1 {
-    width: 238px;
-    height: 160px;
-    color:white;
-    background-color: #032e3e;
-    left: 25%;
-    top: 30%;
-    position: absolute;
-    display: none;
-    z-index: 20;
-}
-
-.overlay1 h1{
-    text-align: center;
-}
-
-.overlay1 input {
-    font-size: larger;
-    width: 130px;
-}
-
-#overlay1_create_btn {
-    width: 100px;
-    height: 25px;
-    margin-left: 15px;
-    margin-top: 15px;
-    border-radius: 10px;
-    background-color: #0a1356;
-    color: white;
-    cursor: pointer;
-}
-
-#overlay1_create_btn:hover{
-    background-color: #4fa1ef;
-    color: black;
-}
-
-
-#overlay1_cancel_btn {
-    width: 100px;
-    height: 25px;
-    margin-left: 15px;
-    margin-top: 15px;
-    border-radius: 10px;
-    background-color: rgb(23, 23, 78);
-    color: white;
-    cursor: pointer;
-}
-
-#overlay1_cancel_btn:hover{
-    background-color: red;
-    color: black;
-}
-
-.overlay2 {
-    width: 245px;
-    height: 330px;
-    color:white;
-    background-color: #032e3e;
-    left: 25%;
-    top: 20%;
-    position: absolute;
-    display: none;
-    z-index: 20;
-}
-
-.overlay2 h1{
-    text-align: center;
-    color: white;
-}
-
-.overlay2DateInputText{
-    margin-left: 25px;
-    color:#00ffc4;
-}
-
-.discriptionInputText{
-    margin-left: 25px;
-    color:#00ffc4;
-}
-
-
-#discriptionInput {
-    width: 232px;
-    height: 121px;
-    margin-left: 7px;
-    margin-top: 5px;
-}
-
-/* 
-.pageContentChilde{
-    float: left;
-    margin-left: 25px;
-    color:#00ffc4
-} */
-
-.overlay2_button_wrapper {
-    margin-left: 15px;
-}
-
-#overlay2_save_btn {
-    width: 50px;
-    height: 25px;
-    border-radius: 20px;
-    background-color: #0a1356;
-    color: white;
-    cursor: pointer;
-}
-
-#overlay2_save_btn:hover{
-    background-color: #4fa1ef;
-    color: black;
-}
-
-#overlay2_cancel_btn {
-    width: 60px;
-    height: 25px;
-    border-radius: 20px;
-    background-color: rgb(23, 23, 78);
-    color: white;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-#overlay2_cancel_btn:hover{
-    background-color: red;
-    color: black;
-}
-
-.page_content {
-    width: 100%;
-    height: 80px;
-    background-color: #051437;
-    border-radius: 40px;
-
-}
-
-.task_tital {
-    font-size: 20px;
-    text-align: center;
-    color:#00ffc4;
-}
-
-.add_details_btn {
-    width: 85px;
-    height: 22px;
-    float: left;
-    margin-left: 15px;
-    border-radius: 20px;
-    background-color: #0a1356;
-    color: white;
-    cursor: pointer;
-}
-
-.add_details_btn:hover {
-    background-color: #4fa1ef;
-    color: black;
-}
-
-.delete_btn {
-    width: 60px;
-    height: 22px;
-    background-color: rgb(23, 23, 78);
-    color: white;
-    border-radius: 20px;
-    border: none;
-    margin-right: 15px;
-    cursor: pointer;
+.mainDiv{
     float: right;
+    width: 70%;
+    height: 559px;
+    display: block;
 }
 
-.delete_btn:hover{
-    background-color: red;
-    color:black;
+.mainContent{
+    width: 70%;
+    height: 559px;
 }
+
+
+/* formOne part  */
+
+.formOne{
+    width: 180px;
+    height: 185px;
+    display: none;
+    background-color: blue;
+    color: white;
+    z-index: 20;
+    position: absolute;
+    top: 25%;
+    left: 45%;
+}
+
+.formOne h1{
+    text-align: center;
+}
+
+.nameInput{
+    font-size: 14px;
+    width: 70px;
+}
+
+.formOneBtns{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formCreateBtn{
+    padding: 4px;
+    border-radius: 10px;
+    background-color: cornsilk;
+}
+
+.formCancelBtn{
+    padding: 4px;
+    border-radius: 10px;
+    background-color: cornsilk;
+}
+
+/* formTwo part */
+
+
+.formTwo{
+    width: 210px;
+    height: 260px;
+    display: none;
+    background-color: blue;
+    color: white;
+    z-index: 20;
+    position: absolute;
+    top: 25%;
+    left: 45%;
+}
+
+.formTwo h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#discriptionInput{
+    width: 152px;
+    height: 48px;
+    margin-left: 32px;
+}
+
+.formTwoBtns{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formTwoSaveBtn{
+    padding: 4px;
+    color: black;
+    background-color: olive;
+}
+
+.formTwoCancelBtn{
+    padding: 4px;
+    color: black;
+    background-color: olive;
+}
+
+/* pageContent part  */
