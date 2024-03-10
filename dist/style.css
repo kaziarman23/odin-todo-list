@@ -1,44 +1,45 @@
-*{
-    padding: 0;
-    margin:0;
+* {
+    padding: 0px;
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
-body{
-    background-color: black;
-}
-.full_wrapper{
-    width:100%;
+.full_wrapper {
+    width: 100%;
 }
 
-.wrapper{
-    width:960px;
+.wrapper {
+    width: 960px;
     margin: 0 auto;
 }
 
-.header{
+.headerBg{
+    height: 80px;
+}
+
+.header {
     height: 80px;
     overflow: hidden;
     background-color: black;
 }
 
-.header h1{
+.header h1 {
     text-align: center;
     color: white;
     margin-top: 20px;
 }
 
-.nav{
+
+.nav {
     float: left;
-    width: 30%;
+    width: 288px;
     height: 559px;
     background-color: black;
-    display: flex;
-    justify-content: center;
+    display: block;
 }
 
-.navBtns{
+.navBtns {
     width: 80%;
     height: 130px;
     margin-top: 75px;
@@ -46,35 +47,39 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin-left: 30px;
 }
 
-#navCreateBtn{
+#navCreateBtn {
     margin-top: 20px;
     display: flex;
-    padding:10px;
+    padding: 10px;
     background-color: olive;
     border-radius: 15px;
     cursor: pointer;
 }
 
-#navClearBtn{
+#navClearBtn {
     display: flex;
-    padding:10px;
+    padding: 10px;
     background-color: olive;
     border-radius: 15px;
     cursor: pointer;
 }
 
-.mainContener{
+.mainContener {
     float: right;
-    width:70%;
+    width: 672px;
     height: 559px;
     position: relative;
 }
 
+.mainContent {
+    height: 559px;
+}
+
 /* form 1  */
-.formOne{
+.formOne {
     width: 200px;
     height: 200px;
     display: none;
@@ -84,22 +89,22 @@ body{
     position: absolute;
     top: 20%;
     left: 20%;
+    z-index: 20;
 }
-.formOne h1{
+.formOne h1 {
     margin-bottom: 35px;
     font-size: 23px;
 }
 
-#createInput{
+#createInput {
     width: 80px;
 }
 
-.formOneBtnContener{
+.formOneBtnContener {
     margin-top: 40px;
 }
 
-
-#formOneCancelBtn{
+#formOneCancelBtn {
     border-radius: 12px;
     padding: 3px;
     background-color: olive;
@@ -107,7 +112,7 @@ body{
     cursor: pointer;
 }
 
-#formOneCreateBtn{
+#formOneCreateBtn {
     border-radius: 12px;
     padding: 3px;
     background-color: olive;
@@ -117,7 +122,7 @@ body{
 
 /* form 2  */
 
-.formTwo{
+.formTwo {
     width: 240px;
     height: 300px;
     display: none;
@@ -126,19 +131,20 @@ body{
     position: absolute;
     top: 20%;
     left: 20%;
+    z-index: 20;
 }
 
-.formTwo h1{
+.formTwo h1 {
     text-align: center;
 }
 
-#discriptionInput{
+#discriptionInput {
     width: 180px;
     height: 45px;
     margin-left: 20px;
-} 
+}
 
-.formTwoBtnContener{
+.formTwoBtnContener {
     width: 100%;
     height: 70px;
     display: flex;
@@ -146,16 +152,26 @@ body{
     align-items: center;
 }
 
-#formTwoSaveBtn{
+#formTwoSaveBtn {
     border-radius: 10px;
     background-color: olive;
     padding: 5px;
     cursor: pointer;
 }
 
-#formTwoCancelBtn{
+#formTwoCancelBtn {
     border-radius: 10px;
     background-color: olive;
     padding: 5px;
     cursor: pointer;
+}
+
+/*styling domPage attributes  */
+
+.pageContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: blue;
 }

@@ -1,67 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>todo-list</title>
-</head>
-<body>
-    <div class="full_wrapper">
-        <div class="wrapper">
-            <div class="header">
-                <h1>To-Do-List</h1>
-            </div>
-        </div>
-    </div>
-    <div class="full_wrapper">
-        <div class="wrapper">
-            <div class="nav">
-                <div class="navBtns">
-                    <button type="button" id="navCreateBtn">Create Project</button><br>
-                    <button type="button" id="navClearBtn">Clear Projects</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>todo-list</title>
+    </head>
+    <body>
+        <div class="full_wrapper">
+            <div class="wrapper">
+                <div class="header">
+                    <h1>To-Do-List</h1>
                 </div>
             </div>
-            <div class="mainContener">
-                <div class="mainContent"></div>
-
-                <form class="formOne">
-                    <h1>Creating Project</h1>
-                    <br>
-                    <label for="createInput">Project Name:</label>
-                    <input type="text" id="createInput">
-                    <br>
-                    <div class="formOneBtnContener">
-                        <button type="button" id="formOneCancelBtn">Cancel Project</button>
-                        <button type="button" id="formOneCreateBtn">Create Project</button>
+        </div>
+        <div class="full_wrapper">
+            <div class="wrapper">
+                <div class="nav">
+                    <div class="navBtns">
+                        <button type="button" id="navCreateBtn">
+                            Create Project</button
+                        ><br />
+                        <button type="button" id="navClearBtn">
+                            Clear Projects
+                        </button>
                     </div>
-                </form>
-                
-                <form class="formTwo">
-                    <h1>Task Details</h1>
+                </div>
+                <div class="mainContener">
+                    <div class="mainContent"></div>
 
-                    <br><label for="dateInput">Due date:</label>
-                    <input type="date" id="dateInput"><br>
+                    <form class="formOne">
+                        <h1>Creating Project</h1>
+                        <br />
+                        <label for="createInput">Project Name:</label>
+                        <input type="text" id="createInput" />
+                        <br />
+                        <div class="formOneBtnContener">
+                            <button type="button" id="formOneCancelBtn">
+                                Cancel Project
+                            </button>
+                            <button type="button" id="formOneCreateBtn">
+                                Create Project
+                            </button>
+                        </div>
+                    </form>
 
-                    <br><label for="priorityInput">Priority level:</label>
-                    <select id="priorityInput" >
-                        <option value="Low">Low</option>
-                        <option value="Midium">Midium</option>
-                        <option value="High">High</option>
-                    </select><br>
-                    
-                    <br><label for="discriptionInput">Discription:</label>
-                    <textarea id="discriptionInput" cols="5"  rows="5" maxlength="10"></textarea><br>
-                    
-                    <br><div class="formTwoBtnContener">
-                        <button type="button" name="submit_btn" id="formTwoSaveBtn">Save</button>
-                        <button type="button" id="formTwoCancelBtn">Cancel</button>
-                    </div><br>
-                </form>
+                    <form class="formTwo">
+                        <h1>Task Details</h1>
+
+                        <br /><label for="dateInput">Due date:</label>
+                        <input type="date" id="dateInput" /><br />
+
+                        <br /><label for="priorityInput">Priority level:</label>
+                        <select id="priorityInput">
+                            <option value="Low">Low</option>
+                            <option value="Midium">Midium</option>
+                            <option value="High">High</option></select
+                        ><br />
+
+                        <br /><label for="discriptionInput">Discription:</label>
+                        <textarea
+                            id="discriptionInput"
+                            cols="5"
+                            rows="5"
+                            maxlength="10"
+                        ></textarea
+                        ><br />
+
+                        <br />
+                        <div class="formTwoBtnContener">
+                            <button
+                                type="button"
+                                name="submit_btn"
+                                id="formTwoSaveBtn"
+                            >
+                                Save
+                            </button>
+                            <button type="button" id="formTwoCancelBtn">
+                                Cancel
+                            </button>
+                        </div>
+                        <br />
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="./main.js"></script>
-</body>
+        <script src="./main.js"></script>
+    </body>
 </html>
