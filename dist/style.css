@@ -7,21 +7,22 @@
 
 .full_wrapper {
     width: 100%;
+    height: auto;
 }
 
 .wrapper {
     width: 960px;
+    height: auto;
+    overflow: hidden;
     margin: 0 auto;
 }
 
-.headerBg{
-    height: 80px;
-}
 
 .header {
     height: 80px;
     overflow: hidden;
     background-color: black;
+    display: block;
 }
 
 .header h1 {
@@ -72,9 +73,11 @@
     width: 672px;
     height: 559px;
     position: relative;
+    display: block;
 }
 
 .mainContent {
+    width: 100%;
     height: 559px;
 }
 
