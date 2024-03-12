@@ -11,7 +11,7 @@ function createPage() {
     navClearBtn.addEventListener("click", function () {
         formOne.style.display = "none";
         const mainContent = document.querySelector(".mainContent");
-        mainContent.value = "";
+        mainContent.textContent = "";
         clearInput();
     });
     formCancelBtn.addEventListener("click", function () {

@@ -5,7 +5,7 @@ const mainContent = document.querySelector(".mainContent");
 const formTwo = document.querySelector(".formTwo");
 const formTwoSaveBtn = document.querySelector(".formTwoSaveBtn");
 const formTwoCancelBtn = document.querySelector(".formTwoCancelBtn");
-const detailsBtn = document.querySelector(".detailsBtn");
+
 
 function addContent() {
     formCreateBtn.addEventListener("click", function () {
@@ -25,6 +25,7 @@ function addContent() {
                 clearInput();
             })
 
+            // adding event on save btn
             formTwoSaveBtn.addEventListener("click", function (e) {
 
                 e.preventDefault()
