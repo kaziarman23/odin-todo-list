@@ -4,6 +4,7 @@ const mainContent = document.querySelector(".mainContent");
 
 const formTwo = document.querySelector(".formTwo");
 const formTwoSaveBtn = document.querySelector(".formTwoSaveBtn");
+const formTwoCancelBtn = document.querySelector(".formTwoCancelBtn");
 const detailsBtn = document.querySelector(".detailsBtn");
 
 function addContent() {
@@ -19,7 +20,17 @@ function addContent() {
             detailsBtn.remove();
             formTwo.style.display = "block";
 
-            formTwoSaveBtn.addEventListener("click", function () {
+            formTwoCancelBtn.addEventListener("click",function(){
+                formTwo.style.display = "none";
+                clearInput();
+            })
+
+            formTwoSaveBtn.addEventListener("click", function (e) {
+
+                e.preventDefault()
+                deleteBtn.remove()
+                
+
                 const dateInput = document.querySelector("#dateInput").value;
                 let date = document.createElement("p");
                 date.innerHTML = `Due date: ${dateInput}`;
@@ -39,7 +50,8 @@ function addContent() {
                 discription.innerHTML = `discription: ${discriptionInput}`;
 
                 const detailsDiv = document.createElement("div");
-
+                pageContent.insertBefore(detailsDiv, pageContent.firstChild);
+                
                 // add class
                 detailsDiv.setAttribute("class", "detailsDiv");
                 date.setAttribute("class", "date");
@@ -49,15 +61,27 @@ function addContent() {
                 detailsDiv.appendChild(date);
                 detailsDiv.appendChild(discription);
                 pageContent.appendChild(detailsDiv)
+                
 
                 formTwo.style.display = "none";
                 clearInput();
+
+                // clear button
+                const close = document.createElement("p")
+                close.innerHTML= "X"
+                    close.addEventListener("click",function(e){
+                        const closeDiv = e.target.parentElement
+                        closeDiv.remove()
+                    })
+                    close.style.cursor = "pointer"
+                pageContent.appendChild(close)
             });
         });
 
         const nameInput = document.querySelector("#nameInput").value;
         const titel = document.createElement("h1");
         titel.innerHTML = `${nameInput}`;
+        titel.textContent = titel.textContent.toUpperCase() //this is for capital latter
 
         const deleteBtn = document.createElement("button");
         deleteBtn.innerHTML = `Delete`;

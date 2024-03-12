@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: purple;
+}
+
 .fullWrapper{
     width: 100%;
 }
@@ -17,7 +21,6 @@
 }
 
 .header{
-    background-color: black;
     display: block;
     height: 80px;
     overflow: hidden;
@@ -34,7 +37,7 @@
 .nav{
     width: 30%;
     height: 559px;
-    background-color: black;
+    background-color: purple;
     float: left;
     display: block;
 }
@@ -46,8 +49,37 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
+    background-color: #6b066b;
+    border-radius: 20px;
     flex-direction: column;
+}
+
+.navCreateBtn{
+    padding: 6px;
+    background-color: #891289;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.navCreateBtn:hover{
+    color:white;
+    background-color: rgb(20, 112, 20);
+}
+
+.navClearBtn{
+    padding: 6px;
+    background-color: #891289;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.navClearBtn:hover{
+    background-color: brown;
+    color:black
 }
 
 .mainDiv{
@@ -69,7 +101,7 @@
     width: 180px;
     height: 185px;
     display: none;
-    background-color: blue;
+    background-color: #6b066b;
     color: white;
     z-index: 20;
     position: absolute;
@@ -96,17 +128,32 @@
 }
 
 .formCreateBtn{
-    padding: 4px;
-    border-radius: 10px;
-    background-color: cornsilk;
+    padding: 6px;
+    background-color: #891289;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.formCreateBtn:hover{
+    color:white;
+    background-color: rgb(20, 112, 20);
 }
 
 .formCancelBtn{
-    padding: 4px;
-    border-radius: 10px;
-    background-color: cornsilk;
+    padding: 6px;
+    background-color: #891289;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
 }
 
+.formCancelBtn:hover{
+    background-color: brown;
+    color:black
+}
 /* formTwo part */
 
 
@@ -114,7 +161,8 @@
     width: 210px;
     height: 260px;
     display: none;
-    background-color: blue;
+    background-color: #6b066b;
+    border-radius: 17px;
     color: white;
     z-index: 20;
     position: absolute;
@@ -142,15 +190,33 @@
 }
 
 .formTwoSaveBtn{
-    padding: 4px;
-    color: black;
-    background-color: olive;
+    padding: 6px;
+    background-color: #891289;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.formTwoSaveBtn:hover{
+    color: white;
+    background-color: rgb(20, 112, 20);
+
 }
 
 .formTwoCancelBtn{
-    padding: 4px;
+    padding: 6px;
+    background-color: #891289;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.formTwoCancelBtn:hover{
+    background-color: brown;
     color: black;
-    background-color: olive;
 }
 
 /* pageContent part  */
@@ -161,25 +227,41 @@
     align-items: center;
     width: 100%;
     height: 70px;
-    background-color: blue;
+    background-color: #580958;
+    border-radius: 20px;
 }
 
 .detailsBtn{
+    cursor: pointer;
     border-radius: 10px;
-    background-color: olive;
-    color: black;
-    padding: 5px;
+    background-color: #891289;
+    border: none;
+    color: white;
+    padding: 7px;
+}
+
+.detailsBtn:hover{
+    color: white;
+    background-color: rgb(20, 112, 20);
 }
 
 .titel{
-    color:black;
+    color: white;
+    font-weight: 700;
 }
 
 .deleteBtn{
+    cursor: pointer;
     border-radius: 10px;
-    background-color: olive;
+    background-color: #891289;
+    border: none;
+    color: white;
+    padding: 7px;
+}
+
+.deleteBtn:hover{
+    background-color: brown;
     color: black;
-    padding: 5px;
 }
 
 .detailsDiv{
@@ -187,6 +269,4 @@
     width: 150px;
     color: black;
     background-color: red;
-    vertical-align: top;
 }
-

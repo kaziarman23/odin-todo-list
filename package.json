@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "watch": "wabpack --watch",
+    "watch": "webpack --watch",
     "build": "webpack"
   },
   "keywords": [],
