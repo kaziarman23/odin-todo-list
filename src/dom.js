@@ -11,6 +11,7 @@ function addContent() {
     formCreateBtn.addEventListener("click", function () {
         formOne.style.display = "none";
         const pageContent = document.createElement("div");
+        
 
         const detailsBtn = document.createElement("button");
         detailsBtn.innerHTML = `Details`;
@@ -39,11 +40,11 @@ function addContent() {
                 const priorityInput =
                     document.querySelector("#priorityInput").value;
                 if (priorityInput === "Low") {
-                    pageContent.style.borderBottom = "5px solid green";
+                    pageContent.style.border = "5px solid green";
                 } else if (priorityInput === "Medium") {
-                    pageContent.style.borderBottom = "5px solid yellow";
+                    pageContent.style.border = "5px solid yellow";
                 } else {
-                    pageContent.style.borderBottom = "5px solid red";
+                    pageContent.style.border = "5px solid red";
                 }
 
                 const discriptionInput = document.querySelector("#discriptionInput").value;
