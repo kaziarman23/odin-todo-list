@@ -56,6 +56,7 @@ function addContent() {
                 detailsDiv.setAttribute("class", "detailsDiv");
                 date.setAttribute("class", "date");
                 discription.setAttribute("class", "discription");
+                
 
                 // appending childs
                 detailsDiv.appendChild(date);
@@ -73,7 +74,9 @@ function addContent() {
                         const closeDiv = e.target.parentElement
                         closeDiv.remove()
                     })
-                    close.style.cursor = "pointer"
+                    close.style.cursor = "pointer";
+                    close.style.fontSize = "20px";
+                    close.style.color = "white";
                 pageContent.appendChild(close)
             });
         });

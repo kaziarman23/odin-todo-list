@@ -266,7 +266,12 @@ body{
 
 .detailsDiv{
     display: inline-block;
-    width: 150px;
-    color: black;
-    background-color: red;
+    width: 165px;
+    padding: 5px;
+    color: white;
+    background-color: #660c66;
+    border-radius: 15px;
 }
+
+
+    
