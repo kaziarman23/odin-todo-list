@@ -16,23 +16,28 @@ function addContent() {
 
         // adding event on details btn
         detailsBtn.addEventListener("click", function () {
-            detailsBtn.style.display ="none";
+            // detailsBtn.style.display = "none";
+            detailsBtn.remove()
             formTwo.style.display = "block";
 
+            //adding event on cancel btn
             formTwoCancelBtn.addEventListener("click", function () {
                 formTwo.style.display = "none";
                 clearInput();
-                detailsBtn.style.display ="block";
+                // detailsBtn.style.display ="block";
             });
 
             // adding event on save btn
             formTwoSaveBtn.addEventListener("click", function (e) {
                 e.preventDefault();
-                detailsBtn.style.display ="none";
+                detailsBtn.style.display = "none";
+                detailsBtn.remove()
 
                 const dateInput = document.querySelector("#dateInput");
-                let date = document.createElement("p");
+                const date = document.createElement("p");
                 date.innerHTML = `Due date: ${dateInput.value}`;
+
+
 
                 const priorityInput = document.querySelector("#priorityInput").value;
                 if (priorityInput === "Low") {
@@ -44,7 +49,7 @@ function addContent() {
                 }
 
                 const discriptionInput = document.querySelector("#discriptionInput");
-                let discription = document.createElement("p");
+                const discription = document.createElement("p");
                 discription.innerHTML = `discription: ${discriptionInput.value}`;
 
                 const detailsDiv = document.createElement("div");
@@ -65,17 +70,6 @@ function addContent() {
                 dateInput.value = "";
                 discriptionInput.value= "";
                 
-                // clear button
-                const close = document.createElement("p");
-                close.innerHTML = "X";
-                close.addEventListener("click", function (e) {
-                    const closeDiv = e.target.parentElement;
-                    closeDiv.remove();
-                });
-                close.style.cursor = "pointer";
-                close.style.fontSize = "20px";
-                close.style.color = "white";
-                pageContent.appendChild(close);
             });
         });
 
