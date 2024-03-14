@@ -16,21 +16,20 @@ function addContent() {
 
         // adding event on details btn
         detailsBtn.addEventListener("click", function () {
-            // detailsBtn.style.display = "none";
-            detailsBtn.remove()
+            
             formTwo.style.display = "block";
 
             //adding event on cancel btn
             formTwoCancelBtn.addEventListener("click", function () {
                 formTwo.style.display = "none";
                 clearInput();
-                // detailsBtn.style.display ="block";
+                
             });
 
             // adding event on save btn
             formTwoSaveBtn.addEventListener("click", function (e) {
                 e.preventDefault();
-                detailsBtn.style.display = "none";
+                
                 detailsBtn.remove()
 
                 const dateInput = document.querySelector("#dateInput");
@@ -64,6 +63,7 @@ function addContent() {
                 detailsDiv.appendChild(discription);
                 pageContent.appendChild(detailsDiv);
 
+                pageContent.style.direction ="ltr"
                 formTwo.style.display = "none";
 
                 // clearing inputs
