@@ -16,27 +16,24 @@ function addContent() {
 
         // adding event on details btn
         detailsBtn.addEventListener("click", function () {
-            
             formTwo.style.display = "block";
 
             //adding event on cancel btn
             formTwoCancelBtn.addEventListener("click", function () {
                 formTwo.style.display = "none";
                 clearInput();
-                
             });
 
             // adding event on save btn
             formTwoSaveBtn.addEventListener("click", function (e) {
                 e.preventDefault();
-                
-                detailsBtn.remove()
+
+                detailsBtn.remove();
+                deleteBtn.remove();
 
                 const dateInput = document.querySelector("#dateInput");
                 const date = document.createElement("p");
                 date.innerHTML = `Due date: ${dateInput.value}`;
-
-
 
                 const priorityInput = document.querySelector("#priorityInput").value;
                 if (priorityInput === "Low") {
@@ -51,25 +48,36 @@ function addContent() {
                 const discription = document.createElement("p");
                 discription.innerHTML = `discription: ${discriptionInput.value}`;
 
+                // creating a mini div to store  discription and date
                 const detailsDiv = document.createElement("div");
 
-                // add class
+                // created another delete button because of right position to the element
+                const closeBtn = document.createElement("button");
+                closeBtn.innerHTML = `Delete`;
+                closeBtn.addEventListener("click", function (e) {
+                    const parentDiv = e.target.parentElement;
+                    parentDiv.remove();
+                });
+
+                // adding classes
                 detailsDiv.setAttribute("class", "detailsDiv");
                 date.setAttribute("class", "date");
                 discription.setAttribute("class", "discription");
+                closeBtn.setAttribute("class", "closeBtn");
 
                 // appending childs
                 detailsDiv.appendChild(date);
                 detailsDiv.appendChild(discription);
                 pageContent.appendChild(detailsDiv);
+                pageContent.appendChild(closeBtn);
 
-                pageContent.style.direction ="ltr"
+                // this is for the right positioning of the element
+                pageContent.style.direction = "ltr";
                 formTwo.style.display = "none";
 
                 // clearing inputs
                 dateInput.value = "";
-                discriptionInput.value= "";
-                
+                discriptionInput.value = "";
             });
         });
 

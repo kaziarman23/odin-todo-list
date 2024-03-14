@@ -277,3 +277,16 @@ body{
     border-radius: 15px;
 }
 
+.closeBtn{
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #891289;
+    border: none;
+    color: white;
+    padding: 7px;
+}
+
+.closeBtn:hover{
+    background-color: brown;
+    color: black;
+}
