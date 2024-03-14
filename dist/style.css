@@ -92,6 +92,8 @@ body{
 .mainContent{
     width: 100%;
     height: 559px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -229,9 +231,11 @@ body{
     height: 70px;
     background-color: #580958;
     border-radius: 20px;
+    margin-bottom: 12px;
 }
 
 .detailsBtn{
+    display: block;
     cursor: pointer;
     border-radius: 10px;
     background-color: #891289;
